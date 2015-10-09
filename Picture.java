@@ -96,7 +96,7 @@ public class Picture
         }
     }
     /**
-     * Change this picture to black/white display
+     * make the sun move
      */
     public void moveSun()
     {
