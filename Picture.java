@@ -103,6 +103,12 @@ public class Picture
         if (wall != null)   // only if it's painted already...
         {
            sun.slowMoveVertical(90);
+           sun.changeColor("black");
+           wall.changeColor("black");
+           roof.changeColor("black");
+           window.changeColor("white");
+           campo.changeColor("black");
+           
             
            }
     }}
