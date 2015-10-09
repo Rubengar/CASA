@@ -63,6 +63,7 @@ public class Picture
         sun.moveVertical(-40);
         sun.changeSize(80);
         sun.makeVisible();
+        
     
         
     }
@@ -94,4 +95,14 @@ public class Picture
             sun.changeColor("yellow");
         }
     }
-}
+    /**
+     * Change this picture to black/white display
+     */
+    public void moveSun()
+    {
+        if (wall != null)   // only if it's painted already...
+        {
+           sun.slowMoveVertical(90);
+            
+           }
+    }}
