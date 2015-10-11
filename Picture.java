@@ -124,4 +124,12 @@ public class Picture
             persona.makeVisible();
             
            }
+    }/**
+     * move a person
+     */
+    public void movePerson()
+    {
+       if (wall != null)   // only if it's painted already...
+        { persona.slowMoveHorizontal(50);
+           }
     }}
