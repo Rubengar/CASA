@@ -17,6 +17,10 @@ public class Picture
     private Circle sun;
     private Square campo;
     private Person persona;
+    private Circle nube1;
+    private Circle nube2;
+    private Circle nube3;
+    
 
     /**
      * Constructor for objects of class Picture
@@ -31,13 +35,27 @@ public class Picture
      */
     public void draw()
     {
-    
+     
+        sun = new Circle();
+        sun.changeColor("yellow");
+        sun.moveHorizontal(100);
+        sun.moveVertical(-40);
+        sun.changeSize(80);
+        sun.makeVisible();
+        
         campo = new Square();
         campo.moveHorizontal(-500);
         campo.moveVertical(100);
         campo.changeSize(1000);
         campo.changeColor("green");
         campo.makeVisible();
+        
+        sun = new Circle();
+        sun.changeColor("yellow");
+        sun.moveHorizontal(100);
+        sun.moveVertical(-40);
+        sun.changeSize(80);
+        sun.makeVisible();
         
         wall = new Square();
         wall.moveHorizontal(-140);
@@ -58,14 +76,6 @@ public class Picture
         roof.moveVertical(-60);
         roof.makeVisible();
         
-        sun = new Circle();
-        sun.changeColor("yellow");
-        sun.moveHorizontal(100);
-        sun.moveVertical(-40);
-        sun.changeSize(80);
-        sun.makeVisible();
-        
-    
         
     }
 
@@ -103,7 +113,7 @@ public class Picture
     {
         if (wall != null)   // only if it's painted already...
         {
-           sun.slowMoveVertical(90);
+           sun.slowMoveVertical(120);
            sun.changeColor("black");
            wall.changeColor("black");
            roof.changeColor("black");
@@ -131,5 +141,41 @@ public class Picture
     {
        if (wall != null)   // only if it's painted already...
         { persona.slowMoveHorizontal(50);
+           }
+    }/**
+     * create a clouds
+     */
+    public void createClouds()
+    {
+       if (wall != null)   // only if it's painted already...
+        { nube1 = new Circle();
+          nube1.changeColor("black");
+          nube1.makeVisible();
+          nube1.changeSize(600);
+          nube1.moveVertical(-600);
+          nube1.moveHorizontal(300);
+          nube1.slowMoveHorizontal(-300);
+       
+         
+          nube3 = new Circle();
+          nube3.changeColor("black");
+          nube3.makeVisible();
+          nube3.changeSize(600);
+          nube3.moveVertical(-600);
+          nube3.moveHorizontal(-1200);
+          nube3.slowMoveHorizontal(600);
+          
+          
+          nube2 = new Circle();
+          nube2.changeColor("black");
+          nube2.makeVisible();
+          nube2.changeSize(600);
+          nube2.moveVertical(-600);
+          nube2.moveHorizontal(300);
+          nube2.slowMoveHorizontal(-600);
+      
+        
+          
+          
            }
     }}
